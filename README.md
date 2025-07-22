@@ -14,7 +14,7 @@ A simple web application that helps users log and track their dreams and goals o
 - Node.js
 - Express.js
 - HTML/CSS (Views)
-- EJS (or any templating engine you're using)
+- EJS 
 
 ## 📁 Project Structure
 
