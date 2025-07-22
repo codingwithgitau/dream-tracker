@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MY DREAMS</h1>
+    <blockquote>
+  <p><%= quote %></p>
+  <footer>— <%= author %></footer>
+</blockquote>
+
+    <ul>
+    <% dreams.forEach(dream => { %>
+      <li>
+        <%= dream.text %>
+        [<a href="/dreams/<%= dream.id %>">View</a>]
+        [<a href="/dreams/<%= dream.id %>/edit">Edit</a>]
+        <form action="/dreams/<%= dream.id %>?_method=DELETE" method="POST" style="display:inline;">
+          <button>Delete</button>
+        </form>
+      </li>
+    <% }) %>
+  </ul>
+
+  <a href="/dreams/new">Add New Dream</a>
+</body>
+</html>
