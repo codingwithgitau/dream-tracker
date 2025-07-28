@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>Document</title>
-</head>
+<%- include('partials/header', { title: 'Add New Dream' }) %>
+
 <body>
-    <h1> Time to add something new</h1>
+    <div class="container mt-5">
+    <h1 class="mb-4"> Time to add something new</h1>
     <form action="/dreams" method="post">
-        <label for="dreamText">Dream: </label>
-        <input type="text" id="dreamText" name="text" required>
-        <button>Submit</button>
+        <div class="mb-3">
+        <label for="dreamText" class="form-label">Dream: </label>
+        <input type="text" id="dreamText" class="form-control" name="text" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-    <a href="/">Go back</a>
-</body>
-</html>
+    <a href="/" class="btn btn-secondary ms-2">Go back</a>
+    </div>
+<%- include('partials/footer') %>

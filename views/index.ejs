@@ -1,23 +1,29 @@
 <%- include('partials/header', { title: 'My Dreams Page' }) %>
 <body>
-    <h1>MY DREAMS</h1>
-    <blockquote>
-  <p><%= quote %></p>
-  <footer>— <%= author %></footer>
+  <div class="container my-5">
+    <h1 class="text-center text-primary mb-4">MY DREAMS</h1>
+    <blockquote class="blockquote text-center">
+  <p class="mb-0"><%= quote %></p>
+  <footer class="blockquote-footer mt-1">— <%= author %></footer>
 </blockquote>
 
-    <ul>
+    <ul class="list-group mb-4">
     <% dreams.forEach(dream => { %>
-      <li>
-        <%= dream.text %>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <div>
+        <strong><%= dream.text %></strong>
+        <div class="mt-2">
         [<a href="/dreams/<%= dream.id %>">View</a>]
         [<a href="/dreams/<%= dream.id %>/edit">Edit</a>]
+        </div>
+        </div>
         <form action="/dreams/<%= dream.id %>?_method=DELETE" method="POST" style="display:inline;">
-          <button>Delete</button>
+          <button class="btn btn-sm btn-danger">Delete</button>
         </form>
       </li>
     <% }) %>
   </ul>
 
-  <a href="/dreams/new">Add New Dream</a>
+  <a href="/dreams/new" class="btn btn-success">Add New Dream</a>
+  </div>
 <%- include('partials/footer') %>

@@ -1,7 +1,12 @@
 <%- include('partials/header', { title: dream.text }) %>
-<body>
-      <h1><%= dream.text %></h1>
-  <p><%= dream.text %></p>
 
-  <a href="/dreams">Back to All Dreams</a>
+<div class="container mt-5">
+    <div class="card">
+         <div class="card-body">
+             <h1 class="card-title"><%= dream.text %></h1>
+             <p class="card-text"><%= dream.text %></p>
+             <a href="/dreams" class="btn btn-secondary mt-3">Back to All Dreams</a>
+            </div>
+         </div>
+        </div>
 <%- include('partials/footer') %>
