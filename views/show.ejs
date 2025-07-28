@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title><%= dream.text %></title>
-</head>
+<%- include('partials/header', { title: dream.text }) %>
 <body>
       <h1><%= dream.text %></h1>
   <p><%= dream.text %></p>
 
   <a href="/dreams">Back to All Dreams</a>
-</body>
-</html>
+<%- include('partials/footer') %>
